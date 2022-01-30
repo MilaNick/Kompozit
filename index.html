@@ -3,10 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>Kompozit</title>
+    <link rel="stylesheet" href="src/style/normalize.css">
+    <link rel="stylesheet" href="src/fonts/stylesheet.css">
     <link rel="stylesheet" href="src/style/style.css">
-
 </head>
 <body>
-Ghbdtn
+<div class="container">
+    <header class="header">
+        <div class="header__logo">
+            <a href="#" class="logo">
+                <span>kompozit</span>
+                <span>Scientific and production enterprise</span>
+            </a>
+        </div>
+        <ul class="header__nav">
+            <li class="nav__item active"><a href="#about">О компании</a></li>
+            <li class="nav__item"><a href="#products">Продукция</a>
+                <ul class="hide">
+                    <li><a href="#">Самосмазывающиеся подшипники скольжения</a></li>
+                    <li><a href="#">Магнитные материалы</a></li>
+                    <li><a href="#">Спеченные металлические пористые фильтрэлементы</a></li>
+                    <li><a href="#">Изделия из конструкционных материалов</a></li>
+                    <li><a href="#">Инструментальные стали</a></li>
+                </ul>
+            </li>
+            <li class="nav__item"><a href="#">Контакты</a></li>
+        </ul>
+        <div class="header__tel"><a href="tel:+78001111111" class="tel">8(800)111-11-11</a></div>
+    </header>
+    <section class="first-screen">
+        <div class="first-screen__slider">
+            <div class="slider">
+                <div class="slide"><img src="src/images/layer_57.jpg" alt=""></div>
+                <div class="arrow arrow__left"></div>
+                <div class="slider__pagination"></div>
+                <div class="arrow arrow__right"></div>
+            </div>
+            <div class="first-screen__description">
+                <h3 class="description__title">В стремлении к совершенству</h3>
+                <p class="description__text">Многолетний опыт исследований и производства, позволяют нам удовлетворить
+                    любые
+                    запросы заказчика и внести свой вклад в успех наших клиентов.</p>
+            </div>
+        </div>
+    </section>
+    <main class="main">
+        <div class="wrap">
+            <h1 class="main__title" id="about">Разработка наукоемких технологий в&nbsp;области порошковой&nbsp;металлургии</h1></div>
+        <p class="main__text"> Композит является научно-инженерным центром, оказывающим услуги в&nbsp;области
+            разработки
+            и&nbsp;внедрения наукоемких технологий порошковой металлургии и&nbsp;производства технических изделий по&nbsp;ним.</p>
+        <section class="our-products">
+            <div class="wrap">
+                <h2 class="our-products__title" id="products">Наша продукция</h2>
+            </div>
+
+            <div class="wrapper">
+                <div class="our-products__box box1">
+                    <div class="our-products__wrap our-products__wrap--white">
+                        <h3 class="our-products__h3">Самосмазывающиеся подшипники&nbsp;скольжения</h3>
+                        <div class="our-products__btn">Подробнее</div>
+                    </div>
+                </div>
+                <div class="our-products__box box2">
+                    <div class="our-products__wrap our-products__wrap--white">
+                        <h3 class="our-products__h3">Магнитные материалы</h3>
+                        <div class="our-products__btn">Подробнее</div>
+                    </div>
+                </div>
+                <div class="our-products__box box3">
+                    <div class="our-products__wrap our-products__wrap--transparent" >
+                        <h3 class="our-products__h3">Спеченные <br> металлические&nbsp;пористые <br> фильтрэлементы</h3>
+                        <div class="our-products__btn">Подробнее</div>
+                    </div>
+                </div>
+                <div class="our-products__double-box box4">
+                    <div class="our-products__wrap our-products__wrap--transparent">
+                        <h3 class="our-products__h3">Изделия из конструкционных материалов</h3>
+                        <div class="our-products__btn">Подробнее</div>
+                    </div>
+                </div>
+                <div class="our-products__box box5">
+                    <div class="our-products__wrap our-products__wrap--white">
+                        <h3 class="our-products__h3">Инструментальные стали</h3>
+                        <div class="our-products__btn">Подробнее</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <div class="advantages__box"></div>
+            <div class="advantages__box"></div>
+            <div class="advantages__box"></div>
+            <div class="advantages__box"></div>
+        </section>
+        <section class="our-customers">
+            <div class="our-customers__slider">
+                <div class="arrow arrow__left"></div>
+                <div class="arrow arrow__right"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <a href="#" class="logo">
+                <span>kompozit</span>
+                <span>Scientific and production enterprise</span>
+            </a>
+        </div>
+        <div class="header__tel"><a href="tel:+78001111111" class="tel">8(800)111-11-11</a></div>
+        <div class="header__tel"><a href="tel:+78001111111" class="tel">8(800)111-11-11</a></div>
+        <div class="footer__nav">
+            <a href="#about">О компании</a>
+            <a href="#products">Продукция</a>
+            <a href="#products">Порошковая металлургия</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="footer__social social"></div>
+        <p>Политика конфиденциальности</p>
+        <!--    id="contacts"-->
+    </footer>
+</div>
+<script src="src/js/script.js"></script>
 </body>
 </html>
