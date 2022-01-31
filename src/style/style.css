@@ -142,22 +142,22 @@ img {
     font: 300 18px 'Open Sans Medium', sans-serif;
     text-indent: 22px; }
 
-.our-products {
+.products {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   text-align: center; }
-  .our-products__title {
+  .products__title {
     margin-bottom: 58px;
     color: #000000;
     font: 100 30px 'Open Sans Light', sans-serif; }
-  .our-products .row {
+  .products .row {
     display: flex;
     width: calc(100% + 20px);
     margin: 0 -10px 32px; }
-  .our-products__item {
+  .products__item {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -165,21 +165,21 @@ img {
     width: calc(100% / 3 - 20px);
     min-height: 258px;
     margin: 0 10px; }
-  .our-products__item--double {
+  .products__item--double {
     width: calc(100% / 3 * 2 - 20px); }
-  .our-products__bg {
+  .products__bg {
     height: 148px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; }
-  .our-products__item--img-full .our-products__bg {
+  .products__item--img-full .products__bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     height: auto; }
-    .our-products__item--img-full .our-products__bg:after {
+    .products__item--img-full .products__bg:after {
       content: '';
       position: absolute;
       top: 0;
@@ -187,9 +187,9 @@ img {
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.5); }
-  .our-products__item--img-full .our-products__desc {
+  .products__item--img-full .products__desc {
     color: #fff; }
-  .our-products__content {
+  .products__content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -197,7 +197,7 @@ img {
     justify-content: flex-end;
     flex-grow: 1;
     border: 1px solid #4a4a4a; }
-    .our-products__content .rect__rigth {
+    .products__content .rect__rigth {
       padding: 7px 25px;
       margin-left: calc(60% + 3px);
       margin-bottom: 60px;
@@ -205,7 +205,7 @@ img {
       font: 300 18px 'Open Sans Regular', sans-serif;
       background: #754c24;
       color: #fff; }
-    .our-products__content .rect__left {
+    .products__content .rect__left {
       padding: 7px 17px;
       margin-top: 25px;
       margin-right: calc(67% + 3px);
@@ -215,7 +215,7 @@ img {
       font: 300 18px 'Open Sans Regular', sans-serif;
       background: #b48a0a;
       color: #fff; }
-  .our-products__desc {
+  .products__desc {
     display: flex;
     align-items: center;
     text-align: center;
@@ -226,20 +226,55 @@ img {
     height: 24px;
     padding: 10px 55px;
     font: 300 20px 'Open Sans Regular', sans-serif; }
-  .our-products__btn {
+  .products__btn {
     margin: 6px auto 24px;
     text-align: center; }
-    .our-products__btn a {
+    .products__btn a {
       padding: 9px 42px;
       border-radius: 4px;
       background: #00aeef;
       color: #fff;
       font: 300 14px 'Open Sans Regular', sans-serif;
       cursor: pointer; }
-      .our-products__btn a:hover {
+      .products__btn a:hover {
         outline: 1px solid #2280a4;
         background: transparent;
         color: #000000;
         text-decoration: underline; }
-  .our-products .row__bottom .our-products__btn {
-    margin-bottom: 30px; }
+  .products .row__bottom {
+    margin-bottom: 68px; }
+    .products .row__bottom .products__btn {
+      margin-bottom: 30px; }
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center; }
+  .advantages .row {
+    display: flex;
+    flex-direction: row; }
+  .advantages__title {
+    margin-bottom: 60px;
+    color: #000000;
+    font: 100 30px 'Open Sans Light', sans-serif; }
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: calc(100% / 4);
+    padding: 0 65px 0 50px; }
+  .advantages__svg {
+    height: 90px;
+    flex-grow: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center; }
+  .advantages__desc {
+    flex-grow: 1; }
+
+.customers {
+  background: #f9f9f9;
+  min-height: 100px; }

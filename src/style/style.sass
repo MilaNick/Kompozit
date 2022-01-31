@@ -114,6 +114,7 @@ img
 
 //--------first-screen__slider--------
 //TODO сделать слйдер, добавить стрелки и пагинацию
+//TODO размеры плашки перевести в проценты и отступы тоже
 .first-screen
   position: relative
   margin-bottom: 66px
@@ -171,7 +172,7 @@ img
 
 //-------------our-products----------
 // TODO расставить якоря, проверить цвета
-.our-products
+.products
   display: flex
   flex-flow: column wrap
   justify-content: center
@@ -208,7 +209,7 @@ img
     background-position: center
 
   &__item--img-full
-    .our-products__bg
+    .products__bg
       position: absolute
       top: 0
       left: 0
@@ -225,7 +226,7 @@ img
         bottom: 0
         background: rgba(0, 0, 0, 0.5)
 
-    .our-products__desc
+    .products__desc
       color: $bg
 
   &__content
@@ -287,11 +288,54 @@ img
         color: $bg-base-text
         text-decoration: underline
   .row__bottom
-    .our-products__btn
+    margin-bottom: 68px
+    .products__btn
       margin-bottom: 30px
 
 
-//------------
+//------------advantages-------------
+// TODO проверить, что должно быть ссылкой
+.advantages
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  align-content: center
+  text-align: center
+
+  & .row
+    display: flex
+    flex-direction: row
+
+  &__title
+    margin-bottom: 60px
+    color: $bg-base-text
+    font: 100 30px 'Open Sans Light', sans-serif
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    width: calc(100% / 4 )
+    padding: 0 65px 0 50px
+
+  &__svg
+    height: 90px
+    flex-grow: 1
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+  &__desc
+    flex-grow: 1
+
+//------------customers----------
+//TODO проверить цвет фона
+.customers
+  background: $bg-section
+  min-height: 100px
+
 //------------footer-----------------
+// TODO
 .footer
 
