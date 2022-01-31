@@ -5,7 +5,7 @@
 //@import "mixin"
 
 
-//-----объявление базовых стилей----
+//-----------base style-----------
 html,
 body
   height: 100%
@@ -18,17 +18,22 @@ body
   max-width: 1140px
   width: 100%
   margin: 0 auto
+  outline: $border
 
 .wrap-lg
   max-width: 1366px
   width: 100%
   margin: 0 auto
+  //outline: $border
 
 a,
 p,
 span
   font-family: 'Open Sans Regular', sans-serif
   color: $bg-base-text
+
+a
+  white-space: nowrap
 
 img
   width: 100%
@@ -43,33 +48,40 @@ img
   display: flex
   flex-direction: column
   height: 100%
-  margin: 0 auto
-
+//TODO проверить все шрифты и цвет и изменить переменные
 //------------header-----------------
+//TODO сделать выпадающее меню
 .header
-  margin: 0 auto
   display: flex
   flex-wrap: nowrap
   align-items: center
+  align-content: center
+  height: 90px
+  padding: 12px 3px 0
 
   &__nav
     display: flex
     flex-wrap: nowrap
-    justify-content: flex-end
     text-transform: uppercase
+    margin-top: 8px
+    margin-left: 24%
 
   &__tel
+    margin-top: 6px
+    margin-left: 4%
     white-space: nowrap
     font: 700 18px 'Open Sans Bold', sans-serif
     letter-spacing: 1.5px
+
     &:hover
       text-decoration: underline
 
 .logo
-  width: 185px
-  height: 39px
   display: flex
   flex-wrap: wrap
+  width: 185px
+  height: 39px
+  margin-right: 5px
 
   & :first-child
     color: $blue
@@ -78,14 +90,14 @@ img
     text-transform: uppercase
 
   & :last-child
-    font: 300 10px 'Open Sans', sans-serif
-
+    font: 300 11px 'Open Sans', sans-serif
 
 .nav__item
-  padding: 9px 29px
-  border-radius: 3px
+  margin-right: 14px
+  padding: 9px 27px
   text-align: center
   font: 300 14px 'Open Sans Regular', sans-serif
+  border-radius: 4px
 
   &:hover
     outline: 1px solid $contact-hover
@@ -93,26 +105,25 @@ img
     a
       color: $contact-hover
 
-
 .active
   background: $blue
   outline: transparent
   a
     color: $bg
 
-
 //--------first-screen__slider--------
+//TODO сделать слйдер, добавить стрелки и пагинацию
 .first-screen
   position: relative
-  //height: 465px
+  margin-bottom: 66px
 
   &__description
     position: absolute
     z-index: 3
     width: 590px
     height: 220px
-    top: 120px
-    left: 155px
+    top: 118px
+    left: 148px
     padding: 6px 40px 18px 50px
     background: $description
     opacity: 0.83
@@ -125,36 +136,40 @@ img
       color: $h3
 
     &__text
+      text-align: justify
       font: 300 20px 'Open Sans Medium', sans-serif
       line-height: 30px
-      text-align: justify
 
 //--------------main------------------
+//TODO
 .main
-  border: $border
   flex-grow: 1
   display: flex
   flex-flow: column wrap
   justify-content: center
 
   .wrap
-    height: 160px
     display: flex
     flex-wrap: wrap
     justify-content: center
     align-items: center
     align-content: center
+    padding-left: 10px
 
   &__title
+    margin-bottom: 34px
     text-align: center
     color: $bg-base-text
     font: 100 36px 'Open Sans Light', sans-serif
 
   &__text
     margin-left: 8px
+    margin-bottom: 66px
     font: 300 18px 'Open Sans Medium', sans-serif
     text-indent: 22px
 
+//-------------our-products----------
+// TODO расставить якоря, поставить плашки "инновации"
 .our-products
   display: flex
   flex-flow: column wrap
@@ -163,73 +178,138 @@ img
   align-content: center
   text-align: center
 
-  & .wrap
-    height: 180px
-
   &__title
+    margin-bottom: 58px
     color: $bg-base-text
-    font: 100 32px 'Open Sans Light', sans-serif
+    font: 100 30px 'Open Sans Light', sans-serif
 
-  .wrapper
-    height: 550px
+  .row
     display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    align-self: flex-end
-    margin-top: -18px
-    overflow: hidden
+    width: calc(100% + 20px)
+    margin: 0 -10px 32px
+    outline: $border
 
-    & .box1
-      background-image: url(../images/layer_44.jpg)
-    & .box2
-      background-image: url(../images/layer_48.jpg)
-    & .box3
-      background-image: url(../images/layer_50.jpg)
-    & .box4
-      background-image: url(../images/layer_52.jpg)
-    & .box5
-      background-image: url(../images/layer_54.jpg)
+  &__item
+    display: flex
+    flex-direction: column
+    position: relative
+    justify-content: flex-end
+    width: calc(100% / 3 - 20px)
+    min-height: 258px
+    margin: 0 10px
+    outline: $border
 
-  &__box
-    width: calc(32% + 3px)
-    height: 270px
-    margin-bottom: 22px
-    background-size: contain
+  &__item--double
+    width: calc(100% / 3 * 2 - 20px)
+
+  &__bg
+    height: 148px
     background-repeat: no-repeat
+    background-size: cover
+    background-position: center
 
-  &__wrap
-    margin-top: 148px
+  &__item--img-full
+    .our-products__bg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      height: auto
 
-    &--white
-      background: $bg
-      border: 1px solid $border-product
+      &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0, 0, 0, 0.5)
 
-    &--transparent
-      background: transparent
+    .our-products__desc
       color: $bg
 
-  //&__double-box
+  &__content
+    position: relative
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
 
-  &__h3
+  &__desc
+    display: flex
+    align-items: center
+    text-align: center
+    justify-content: center
+    word-break: break-word
+    flex-grow: 1
+    width: 100%
     height: 24px
-    font: 300 18px 'Open Sans Regular', sans-serif
+    padding: 10px 45px
+    font: 300 20px 'Open Sans Regular', sans-serif
 
   &__btn
-    width: 160px
-    margin: 0 auto 20px
-    padding: 9px 29px
-    border-radius: 3px
+    margin: 0 auto 24px
     text-align: center
-    font: 300 14px 'Open Sans Regular', sans-serif
-    color: $bg
-    background: $blue
-    cursor: pointer
 
-    &:hover
-      outline: 1px solid $contact-hover
-      background: transparent
-      text-decoration: underline
-      color: #000
+    a
+      padding: 9px 42px
+      border-radius: 4px
+      background: $blue
+      color: $bg
+      font: 300 14px 'Open Sans Regular', sans-serif
+      cursor: pointer
+
+      &:hover
+        outline: 1px solid $contact-hover
+        background: transparent
+        color: $bg-base-text
+        text-decoration: underline
+
+
+// our-products__item--double our-products__item--img-full
+// our-products__item--img-top
+//  &__box
+//    width: calc(32% + 3px)
+//    height: 270px
+//    margin-bottom: 22px
+//    background-size: contain
+//    background-repeat: no-repeat
+//
+//  &__wrap
+//    margin-top: 148px
+//
+//    &--white
+//      background: $bg
+//      border: 1px solid $border-product
+//
+//    &--transparent
+//      background: transparent
+//      color: $bg
+//
+//  //&__double-box
+//
+//  &__h3
+//    height: 24px
+//    font: 300 18px 'Open Sans Regular', sans-serif
+//
+//  &__btn
+//    width: 160px
+//    margin: 0 auto 20px
+//    padding: 9px 29px
+//    border-radius: 3px
+//    text-align: center
+//    font: 300 14px 'Open Sans Regular', sans-serif
+//    color: $bg
+//    background: $blue
+//    cursor: pointer
+//
+//    &:hover
+//      outline: 1px solid $contact-hover
+//      background: transparent
+//      text-decoration: underline
+//      color: #000
 
 //------------footer-----------------
 .footer
