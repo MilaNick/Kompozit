@@ -1,10 +1,21 @@
 @import url(../fonts/stylesheet.css);
+html,
+body {
+  height: 100%;
+  background: #fff; }
+
 * {
   box-sizing: border-box; }
 
-body {
+.wrap-md {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto; }
+
+.wrap-lg {
   max-width: 1366px;
-  background: #fff; }
+  width: 100%;
+  margin: 0 auto; }
 
 a,
 p,
@@ -20,32 +31,24 @@ img {
 .hide {
   display: none; }
 
-.visible {
-  display: block; }
-
 .container {
-  width: 1366px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0 auto; }
 
 .header {
   margin: 0 auto;
-  width: 1140px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center; }
-  .header__logo {
-    margin-top: 30px;
-    margin-bottom: 19px; }
   .header__nav {
-    width: 720px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    margin-top: 32px;
     text-transform: uppercase; }
   .header__tel {
-    margin-left: 58px;
-    margin-top: 15px;
+    white-space: nowrap;
     font: 700 18px 'Open Sans Bold', sans-serif;
     letter-spacing: 1.5px; }
     .header__tel:hover {
@@ -66,7 +69,6 @@ img {
 
 .nav__item {
   padding: 9px 29px;
-  margin-left: 5px;
   border-radius: 3px;
   text-align: center;
   font: 300 14px 'Open Sans Regular', sans-serif; }
@@ -83,9 +85,7 @@ img {
     color: #fff; }
 
 .first-screen {
-  position: relative;
-  height: 465px;
-  margin-bottom: 45px; }
+  position: relative; }
   .first-screen__description {
     position: absolute;
     z-index: 3;
@@ -110,13 +110,10 @@ img {
 
 .main {
   border: 1px solid red;
-  width: 1139px;
-  margin: 0 auto;
+  flex-grow: 1;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center; }
+  justify-content: center; }
   .main .wrap {
     height: 160px;
     display: flex;
@@ -177,8 +174,6 @@ img {
     .our-products__wrap--transparent {
       background: transparent;
       color: #fff; }
-  .our-products__double-box {
-    width: 66%; }
   .our-products__h3 {
     height: 24px;
     font: 300 18px 'Open Sans Regular', sans-serif; }
