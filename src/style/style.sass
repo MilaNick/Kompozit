@@ -308,7 +308,7 @@ img
     flex-direction: row
 
   &__title
-    margin-bottom: 60px
+    margin-bottom: 52px
     color: $bg-base-text
     font: 100 30px 'Open Sans Light', sans-serif
 
@@ -317,25 +317,76 @@ img
     flex-direction: column
     justify-content: flex-end
     width: calc(100% / 4 )
-    padding: 0 65px 0 50px
+    padding: 0 60px 0 60px
 
   &__svg
-    height: 90px
+    height: 104px
     flex-grow: 1
     background-repeat: no-repeat
     background-size: contain
     background-position: center
 
   &__desc
+    margin-top: 12px
     flex-grow: 1
+    margin-bottom: 134px
 
 //------------customers----------
 //TODO проверить цвет фона
 .customers
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  align-content: center
+
+  text-align: center
   background: $bg-section
-  min-height: 100px
+
+  &__title
+    margin-bottom: 56px
+    color: $bg-base-text
+    font: 100 30px 'Open Sans Light', sans-serif
+
+  &__slider
+    & .wrap
+      width: 90%
+      outline: $border
+      margin: 0 auto
+      margin-bottom: 102px
+    & .slider
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      //align-items: center
+      //align-content: center
+      width: 100%
+      //margin: 0 -60px 0
+      outline: $border
+      &__item
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        align-content: center
+        width: calc(100% / 6 - 35px)
+        height: 122px
+        //margin-left: 40px
+        background: $bg-footer
+        outline: $border
+
+        & img
+
+          width: 50%
+          height: auto
+
+
+
+
 
 //------------footer-----------------
 // TODO
 .footer
+  height: auto
+  background: $bg-footer
 
