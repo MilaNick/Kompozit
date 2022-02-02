@@ -1,0 +1,64 @@
+window.addEventListener('DOMContentLoaded', function () {
+//------------------drop-down menu--------------------
+  const itemsDropdown = document.querySelectorAll('.item--dropdown');
+  itemsDropdown.forEach(item => {
+    item.addEventListener('mouseenter', event => {
+      const dropdown = event.target.querySelector('.dropdown-wrap');
+      dropdown.classList.remove('hide');
+      dropdown.style.animation = 'rotate 1000ms';
+    })
+    item.addEventListener('mouseleave', event => {
+      const dropdown = event.target.querySelector('.dropdown-wrap');
+      dropdown.classList.add('hide');
+    })
+  })
+
+//-------------------slider---------------------------
+  const prev = document.querySelector('.arrow__prev');
+  const next = document.querySelector('.arrow__next');
+  const topSlider = document.querySelector('.first-screen__slider');
+
+  const slider = (slider) => {
+    const images = slider.querySelectorAll('.slider__item');
+    const dots = slider.querySelectorAll('.slider__pagination-btn');
+    let currentIndex = 0;
+    const showSlideByIndex = (targetIndex) => {
+      images[currentIndex].classList.remove('active');
+      images[currentIndex].classList.add('hide');
+      images[targetIndex].classList.add('active');
+      images[targetIndex].style.animation = 'rotate 2500ms';
+      const ACTIVE_CLASSNAME_DOT = 'slider__pagination-btn--active';
+      dots[currentIndex].classList.remove(ACTIVE_CLASSNAME_DOT);
+      dots[targetIndex].classList.add(ACTIVE_CLASSNAME_DOT);
+      currentIndex = targetIndex;
+    }
+    const getChangeSlide = (dir) => () => {
+      let targetIndex;
+      if (dir === 'next') {
+        targetIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
+      } else {
+        targetIndex = (currentIndex <= 0 ? images.length : currentIndex) - 1;
+      }
+      showSlideByIndex(targetIndex);
+    }
+    dots.forEach((dot) => {
+      dot.addEventListener('click', ({target}) => {
+        const targetIndex = [...dots].indexOf(target);
+        showSlideByIndex(targetIndex);
+      })
+    })
+    const prevSlide = getChangeSlide('prev');
+    const nextSlide = getChangeSlide('next');
+    prev.addEventListener('click', prevSlide);
+    next.addEventListener('click', nextSlide);
+    slider.addEventListener('mouseleave', () => {
+      const id = setInterval(nextSlide, 5000);
+      slider.addEventListener('mouseenter', () => {
+        clearInterval(id);
+      })
+    })
+  }
+  slider(topSlider);
+
+
+})
