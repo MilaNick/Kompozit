@@ -64,11 +64,11 @@ window.addEventListener('DOMContentLoaded', function () {
   let position = 0;
   const slidesToShow = 8;
   const slidesToScroll = 1;
-  const container = document.querySelector('.customers__slider')
-  const track = document.querySelector('.bottom-slider')
-  const btnPrev = document.querySelector('.customers__arrow .arrow__prev')
-  const btnNext = document.querySelector('.customers__arrow .arrow__next')
-  const items = document.querySelectorAll('.slider__item')
+  const container = document.querySelector('.customers .customers__slider')
+  const track = document.querySelector('.customers .bottom-slider')
+  const btnPrev = document.querySelector('.customers .customers__arrow .arrow__prev')
+  const btnNext = document.querySelector('.customers .customers__arrow .arrow__next')
+  const items = document.querySelectorAll('.customers .bottom-slider__item')
   const itemsCount = items.length;
   const itemWidth = container.clientWidth / slidesToShow;
   const movePosition = slidesToScroll * itemWidth;
