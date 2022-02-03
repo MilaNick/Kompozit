@@ -3,9 +3,6 @@
 @import "src/fonts/stylesheet.css"
 @import "mixin"
 @import "animate"
-//@import "details"
-
-
 
 //-----------base style-----------
 html,
@@ -15,6 +12,11 @@ body
 
 *
   box-sizing: border-box
+
+.wrap-s
+  max-width: 1140px
+  width: 100%
+  margin: 0 auto
 
 .wrap-md
   max-width: 1200px
@@ -49,7 +51,7 @@ img
   flex-direction: column
   height: 100%
   margin: 0 auto
-//TODO проверить все шрифты и цвет и изменить переменные
+
 //------------header-----------------
 .header
   display: flex
@@ -60,7 +62,7 @@ img
   padding: 12px 3px 0
 
   &__logo
-    margin-left: 32px
+    margin-left: 29px
 
   &__nav
     display: flex
@@ -105,7 +107,7 @@ img
     & .link
       color: $contact-hover
 
-// TODO не могу понять закономерности в расстояниях между item меню, потому костыль. Исправить
+// TODO не могу понять закономерности в расстояниях между item меню Исправить
 .item--dropdown
   margin-left: -32px
 
@@ -155,7 +157,6 @@ img
 
 
 //--------first-screen__slider--------
-//TODO сделать слaйдер и пагинацию
 .first-screen
   position: relative
   display: flex
@@ -168,7 +169,7 @@ img
     z-index: 3
     width: 44.4%
     top: 26%
-    left: 10.8%
+    left: 11%
     padding: 34px 40px 18px 58px
     background: $description
     opacity: 0.83
@@ -192,7 +193,7 @@ img
     line-height: 30px
     color: $text
 
-.slider
+.top-slider
   width: 100%
 
   &__item
@@ -216,8 +217,7 @@ img
         border: 1px solid $pagination
         transition: background-color .3s
       &--active:before
-        background: $pagination
-
+        background: $bg-footer
 
 .arrow
   position: absolute
@@ -226,14 +226,15 @@ img
   top: 41%
   transition: transform 1s ease-in-out
   cursor: pointer
-  &:hover
-    transform: rotate(360deg)
 
   &__prev
     left: 6.8%
-
+    &:hover
+      transform: translateX(-8px)
   &__next
     left: 88.6%
+    &:hover
+      transform: translateX(8px)
 
 //--------------main------------------
 //TODO расставить везде префиксы
@@ -243,7 +244,7 @@ img
   flex-flow: column wrap
   justify-content: center
 
-  .wrap
+  &__wrap
     display: flex
     flex-wrap: wrap
     justify-content: center
@@ -252,21 +253,20 @@ img
     padding-left: 10px
 
   &__title
-    margin-bottom: 46px
+    margin-bottom: 51px
     margin-left: 8px
     text-align: center
     color: $bg-base-text
     font: 100 36px 'Open Sans Light', sans-serif
 
   &__text
-    margin-left: 34px
+    margin-left: 42px
     margin-bottom: 94px
     color: $text
-    font: 100 20px 'Open Sans Light', sans-serif
+    font: 100 18px 'Open Sans Light', sans-serif
     text-indent: 22px
 
 //-------------our-products----------
-
 .products
   display: flex
   flex-flow: column wrap
@@ -276,13 +276,13 @@ img
   text-align: center
 
   &__title
-    margin-bottom: 58px
-    color: $bg-base-text
+    margin-bottom: 56px
     font: 100 30px 'Open Sans Light', sans-serif
+    color: $bg-base-text
 
-  .row
+  &__row
     display: flex
-    width: calc(100% - 20px)
+    width: calc(100% + 20px)
     margin: 0 -10px 32px
 
   &__item
@@ -298,7 +298,7 @@ img
     width: calc(100% / 3 * 2 - 20px)
 
   &__bg
-    height: 148px
+    height: 144px
     background-repeat: no-repeat
     background-size: cover
     background-position: center
@@ -311,7 +311,6 @@ img
       right: 0
       bottom: 0
       height: auto
-
       &::after
         content: ''
         position: absolute
@@ -333,9 +332,9 @@ img
     flex-grow: 1
     border: 1px solid $border-product
 
-    .rect__rigth
+    .rect__right
       padding: 7px 25px
-      margin-left: calc(60% + 3px)
+      margin-left: calc(60% + 5px)
       margin-bottom: 60px
       text-align: right
       font: 300 18px 'Open Sans Regular', sans-serif
@@ -345,7 +344,7 @@ img
     .rect__left
       padding: 7px 17px
       margin-top: 25px
-      margin-right: calc(67% + 3px)
+      margin-right: calc(67% + 5px)
       margin-bottom: 84px
       text-align: left
       white-space: nowrap
@@ -363,7 +362,8 @@ img
     width: 100%
     height: 24px
     padding: 10px 55px
-    font: 300 20px 'Open Sans Regular', sans-serif
+    font: 300 18px 'Open Sans Regular', sans-serif
+    letter-spacing: 0.2px
 
   &__btn
     margin: 6px auto 24px
@@ -376,20 +376,18 @@ img
       color: $bg
       font: 300 14px 'Open Sans Regular', sans-serif
       cursor: pointer
-
       &:hover
         outline: 1px solid $contact-hover
         background: transparent
-        color: $bg-base-text
+        color: $contact-hover
         text-decoration: underline
+
   .row__bottom
-    margin-bottom: 68px
+    margin-bottom: 91px
     .products__btn
       margin-bottom: 30px
 
-
 //------------advantages-------------
-// TODO проверить, что должно быть ссылкой
 .advantages
   display: flex
   flex-direction: column
@@ -398,12 +396,12 @@ img
   align-content: center
   text-align: center
 
-  & .row
+  &__row
     display: flex
     flex-direction: row
 
   &__title
-    margin-bottom: 52px
+    margin-bottom: 56px
     color: $bg-base-text
     font: 100 30px 'Open Sans Light', sans-serif
 
@@ -412,7 +410,7 @@ img
     flex-direction: column
     justify-content: flex-end
     width: calc(100% / 4 )
-    padding: 0 60px 0 60px
+    padding: 0 39px 0 44px
 
   &__svg
     height: 104px
@@ -422,13 +420,14 @@ img
     background-position: center
 
   &__desc
-    margin-top: 12px
     flex-grow: 1
-    margin-bottom: 134px
+    margin-top: 8px
+    margin-bottom: 98px
+    font: 100 16px 'Open Sans Light', sans-serif
 
 //------------customers----------
-//TODO проверить цвет фона
 .customers
+  position: relative
   display: flex
   flex-direction: column
   justify-content: center
@@ -438,85 +437,103 @@ img
   background: $bg-section
 
   &__title
-    margin-bottom: 56px
-    color: $bg-base-text
+    margin: 62px 0 73px
     font: 100 30px 'Open Sans Light', sans-serif
+    color: $bg-base-text
+
+  &__row
 
   &__slider
-    & .wrap
-      width: 90%
-      outline: $border
-      margin: 0 auto
-      margin-bottom: 102px
-    & .slider1
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      //align-items: center
-      //align-content: center
-      width: 100%
-      //margin: 0 -60px 0
-      outline: $border
-      &__item
-        display: flex
-        flex-direction: row
-        justify-content: space-around
-        align-items: center
-        align-content: center
-        width: calc(100% / 6 - 35px)
-        height: 122px
-        //margin-left: 40px
-        background: $bg-footer
-        outline: $border
+    width: 90%
+    outline: $border
+    margin: 0 auto 141px
 
-        & img
-          width: 50%
-          height: auto
+  &__arrow
+
+    &__prev
+      left: 14.4%
+      &:hover
+        transform: translateX(-8px)
+    &__next
+      left: 80.6%
+      &:hover
+        transform: translateX(8px)
+
+.bottom-slider
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 100%
+  outline: $border
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    align-content: center
+    width: calc(100% / 6 - 35px)
+    height: 122px
+    background: $bg-footer
+    outline: $border
+
+    & img
+      width: 50%
+      height: auto
 
 //------------footer-----------------
-// TODO
 .footer
   display: flex
   flex-direction: column
   padding: 52px 2px 10px
   background: $bg-footer
 
-  & .wrap
+  &__wrap
     display: flex
     flex-direction: row
     justify-content: space-between
     margin-left: 1.5%
+
   &__logo
-    margin-left: 1.30%
+    margin-left: 1.65%
     margin-bottom: 35px
 
   &__tel
     display: flex
     flex-direction: column
-    margin-left: 11%
+    margin-left: -4%
     white-space: nowrap
     font: 700 18px 'Open Sans Bold', sans-serif
     letter-spacing: 1.5px
     &:hover
       text-decoration: underline
+    & .tel
+      margin-bottom: 19px
 
-    .tel
-      margin-bottom: 140px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__privacy
+    display: inline-block
+    margin-top: 11px
+    margin-right: 2.75%
+    font: 300 11px 'Open Sans', sans-serif
 
   &__nav
     display: flex
     flex-direction: row
     flex-wrap:  wrap
-    margin-left: 7%
+    max-width: 427px
+    width: 100%
     text-transform: uppercase
 
-    & .nav__item
-      margin: 0 0 0 13%
+    &-item
+      margin-left: 40px
 
   &__social
-    height: 22px
-    margin-left: 20px
-    outline: $border
+    display: inline-block
+    margin-left: 35px
 
 .social
   display: flex
@@ -533,7 +550,6 @@ img
     transition: filter .3s
     &:hover
       filter: grayscale(0)
-
   .facebook
     background-position: 0 0
   .vk
@@ -545,12 +561,6 @@ img
   .instagram
     background-position: -120px 0
 
-  &__privacy
-    margin-right: 3.5%
-    font: 300 11px 'Open Sans', sans-serif
-
-// TODO разобраться со спрайтами
-
 //------------for--js-----------------
 .hide
   display: none
@@ -559,4 +569,4 @@ img
   display: block
 
 // TODO расставить якоря, проверить цвета
-// TODO <img src="src/images/social_icons.png" alt="">
+// TODO проверить, что должно быть ссылкой

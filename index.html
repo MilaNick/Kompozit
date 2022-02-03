@@ -47,8 +47,9 @@
     <div class="wrap-lg">
         <section class="first-screen">
             <div class="first-screen__slider">
-                <div class="slider">
-                    <div class="slider__item active"><img src="src/images/layer_60.jpg" class="slider__img" alt=""></div>
+                <div class="top-slider">
+                    <div class="slider__item active"><img src="src/images/layer_60.jpg" class="slider__img" alt="">
+                    </div>
                     <div class="slider__item hide"><img src="src/images/layer_59.jpg" class="slider__img" alt=""></div>
                     <div class="slider__item hide"><img src="src/images/layer_58.jpg" class="slider__img" alt=""></div>
                     <div class="slider__item hide"><img src="src/images/layer_57.jpg" class="slider__img" alt=""></div>
@@ -74,15 +75,17 @@
     </div>
     <main class="main">
         <div class="wrap-md">
-            <div class="wrap">
+            <div class="main__wrap">
                 <h1 class="main__title" id="about">Разработка наукоемких технологий в&nbsp;области порошковой&nbsp;металлургии</h1>
             </div>
             <p class="main__text"> Композит является научно-инженерным центром, оказывающим услуги в&nbsp;области
                 разработки и&nbsp;внедрения наукоемких технологий порошковой металлургии и&nbsp;производства технических
                 изделий по&nbsp;ним.</p>
+        </div>
+        <div class="wrap-s">
             <section class="products">
                 <h2 class="products__title" id="products">Наша продукция</h2>
-                <div class="row" id="product_1">
+                <div class="products__row" id="product_1">
                     <div class="products__item products__item--img-top">
                         <div class="products__bg" style="background-image: url(src/images/layer_44.jpg)"></div>
                         <div class="products__content">
@@ -100,13 +103,13 @@
                     <div class="products__item products__item--img-full">
                         <div class="products__bg" style="background-image: url(src/images/layer_50.jpg)"></div>
                         <div class="products__content">
-                            <div class="rect__rigth">Инновации</div>
+                            <div class="rect__right">Инновации</div>
                             <div class="products__desc">Спеченные металлические&nbsp;пористые фильтрэлементы</div>
                             <div class="products__btn"><a href="#">Подробнее</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="row row__bottom" id="product_2">
+                <div class="products__row row__bottom" id="product_2">
                     <div class="products__item products__item--double products__item--img-full">
                         <div class="products__bg" style="background-image: url(src/images/layer_52.jpg)"></div>
                         <div class="products__content">
@@ -124,9 +127,11 @@
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="wrap-md">
             <section class="advantages">
                 <h2 class="advantages__title" id="advantages">Преимущества</h2>
-                <div class="row">
+                <div class="advantages__row">
                     <div class="advantages__item">
                         <div class="advantages__svg"
                              style="background-image: url(src/images/advantages-parties.svg);"></div>
@@ -145,7 +150,7 @@
                     <div class="advantages__item">
                         <div class="advantages__svg"
                              style="background-image: url(src/images/advantages-materials.svg);"></div>
-                        <p class="advantages__desc">Высококачественное сырье российского и&nbsp;импортного&nbsp;производства</p>
+                        <p class="advantages__desc">Высококачественное сырье&nbsp;российского и&nbsp;импортного&nbsp;производства</p>
                     </div>
                 </div>
             </section>
@@ -153,28 +158,28 @@
         <section class="customers">
             <div class="wrap-md">
                 <h2 class="customers__title" id="customers">Наши заказчики</h2>
-                <div class="row">
+                <div class="customers__row">
                     <div class="customers__slider">
-                        <div class="wrap">
-                            <div class="slider1">
-                                <div class="slider1__item"><img src="src/images/layer_27.jpg" alt=""></div>
-                                <div class="slider1__item"><img src="src/images/layer_66.jpg" alt=""></div>
-                                <div class="slider1__item"><img src="src/images/layer_29.jpg" alt=""></div>
-                                <div class="slider1__item"><img src="src/images/layer_63.jpg" alt=""></div>
-                                <div class="slider1__item"><img src="src/images/layer_64.jpg" alt=""></div>
-                                <div class="slider1__item"><img src="src/images/layer_28.jpg" alt=""></div>
-                            </div>
+                        <div class="bottom-slider">
+                            <div class="slider__item"><img src="src/images/layer_27.jpg" alt=""></div>
+                            <div class="slider__item"><img src="src/images/layer_66.jpg" alt=""></div>
+                            <div class="slider__item"><img src="src/images/layer_29.jpg" alt=""></div>
+                            <div class="slider__item"><img src="src/images/layer_63.jpg" alt=""></div>
+                            <div class="slider__item"><img src="src/images/layer_64.jpg" alt=""></div>
+                            <div class="slider__item"><img src="src/images/layer_28.jpg" alt=""></div>
                         </div>
-                        <div class="arrow arrow__left"></div>
-                        <div class="arrow arrow__right"></div>
+                        <div class="customers__arrow">
+                            <div class="arrow arrow__prev"><img src="src/images/arrow_left.png" alt=""></div>
+                            <div class="arrow arrow__next"><img src="src/images/arrow_right.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="wrap-md">
-            <div class="wrap">
+        <div class="wrap-s">
+            <div class="footer__wrap">
                 <div class="footer__logo">
                     <a href="#" class="logo">
                         <span>kompozit</span>
@@ -182,17 +187,17 @@
                     </a>
                 </div>
                 <div class="footer__tel">
-                    <div><a href="tel:+78001111111" class="tel">8(800)111-11-11</a></div>
-                    <div><a href="tel:+78001111111" class="tel">8(800)111-11-11</a></div>
+                    <a href="tel:+78001111111" class="tel">8(800)111-11-11</a>
+                    <a href="tel:+78001111111" class="tel">8(800)111-11-11</a>
                 </div>
                 <div class="footer__nav">
-                    <div class="nav__item"><a href="#about">О компании</a></div>
-                    <div class="nav__item"><a href="#products">Порошковая металлургия</a></div>
-                    <div class="nav__item"><a href="#products">Продукция</a></div>
-                    <div class="nav__item"><a href="#">Контакты</a></div>
+                    <div class="footer__nav-item"><a href="#about">О компании</a></div>
+                    <div class="footer__nav-item"><a href="#products">Порошковая металлургия</a></div>
+                    <div class="footer__nav-item"><a href="#products">Продукция</a></div>
+                    <div class="footer__nav-item"><a href="#">Контакты</a></div>
                 </div>
             </div>
-            <div class="wrap">
+            <div class="footer__wrapper">
                 <div class="footer__social social">
                     <a href="#" class="social__btn fasebook"></a> <!-- обсудить btn и a -->
                     <a href="#" class="social__btn vk"></a>
@@ -201,7 +206,6 @@
                     <a href="#" class="social__btn instagram"></a>
                 </div>
                 <div class="footer__privacy">Политика конфиденциальности</div>
-                <!--    id="contacts"-->
             </div>
         </div>
     </footer>
