@@ -438,20 +438,19 @@ img
     color: $bg-base-text
 
   &__slider
+    position: relative
     width: 90%
     margin: 0 auto 106px
     overflow: hidden
 
   &__arrow
-    & .arrow
+    min-width: 1200px
+    &.arrow
+      position: absolute
       &__prev
-        top: 166px
-        left: 13.4%
         &:hover
           transform: translateX(-8px)
       &__next
-        top: 166px
-        left: 82%
         &:hover
           transform: translateX(8px)
 
