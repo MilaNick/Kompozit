@@ -104,10 +104,8 @@ img
     & .link
       color: $contact-hover
 
-// TODO не могу понять закономерности в расстояниях между item меню Исправить
 .item--dropdown
   margin-left: -32px
-
 .dropdown-wrap
   position: absolute
   min-width: 450px
@@ -234,7 +232,6 @@ img
       transform: translateX(8px)
 
 //--------------main------------------
-//TODO расставить везде префиксы
 .main
   flex-grow: 1
   display: flex
@@ -441,6 +438,7 @@ img
   &__slider
     width: 90%
     margin: 0 auto 106px
+    overflow: hidden
 
   &__arrow
     .arrow
@@ -462,7 +460,7 @@ img
   max-width: 1080px
   width: 100%
   padding: 0 30px
-  overflow: hidden
+
   & :first-child
     margin-left: 0
 
@@ -493,7 +491,7 @@ img
 .footer
   display: flex
   flex-direction: column
-  padding: 52px 2px 10px
+  padding: 50px 2px 10px
   background: $bg-footer
 
   &__wrap
@@ -537,8 +535,14 @@ img
     width: 100%
     text-transform: uppercase
 
+    & :nth-child(2n+1)
+      margin-left: -19px
+
+    & :nth-child(2n)
+      margin-left: 196px
+
     &-item
-      margin-left: 40px
+      letter-spacing: -2px
 
   &__social
     display: inline-block
@@ -577,5 +581,3 @@ img
 .active
   display: block
 
-// TODO расставить якоря, проверить цвета
-// TODO проверить, что должно быть ссылкой

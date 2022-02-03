@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 //--------------slider-bottom-----------------
   let position = 0;
-  const slidesToShow = 6;
+  const slidesToShow = 8;
   const slidesToScroll = 1;
   const container = document.querySelector('.customers__slider')
   const track = document.querySelector('.bottom-slider')
