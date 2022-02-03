@@ -22,13 +22,10 @@ body
   max-width: 1200px
   width: 100%
   margin: 0 auto
-  //outline: $border
-
 .wrap-lg
   max-width: 1366px
   width: 100%
   margin: 0 auto
-  //outline: $border
 
 a,
 p,
@@ -437,48 +434,60 @@ img
   background: $bg-section
 
   &__title
-    margin: 62px 0 73px
+    margin: 58px 0 56px
     font: 100 30px 'Open Sans Light', sans-serif
     color: $bg-base-text
 
-  &__row
-
   &__slider
     width: 90%
-    outline: $border
-    margin: 0 auto 141px
+    margin: 0 auto 106px
 
   &__arrow
-
-    &__prev
-      left: 14.4%
-      &:hover
-        transform: translateX(-8px)
-    &__next
-      left: 80.6%
-      &:hover
-        transform: translateX(8px)
+    .arrow
+      &__prev
+        top: 166px
+        left: 13.4%
+        &:hover
+          transform: translateX(-8px)
+      &__next
+        top: 166px
+        left: 82%
+        &:hover
+          transform: translateX(8px)
 
 .bottom-slider
   display: flex
   flex-direction: row
   justify-content: space-between
+  max-width: 1080px
   width: 100%
-  outline: $border
+  padding: 0 30px
+  overflow: hidden
+  & :first-child
+    margin-left: 0
+
+.slider
   &__item
     display: flex
     flex-direction: row
     justify-content: space-around
     align-items: center
     align-content: center
-    width: calc(100% / 6 - 35px)
+    min-width: calc(100% / 6 - 32px)
     height: 122px
-    background: $bg-footer
-    outline: $border
+    margin-left: 40px
+    background: $bg
+    filter: grayscale(1)
+    transition: filter .3s
+    &:hover
+      filter: grayscale(0)
 
     & img
-      width: 50%
-      height: auto
+      width: 95%
+      min-width: 95%
+      height: 75%
+      min-height: 73%
+      object-fit: contain
 
 //------------footer-----------------
 .footer
@@ -500,7 +509,7 @@ img
   &__tel
     display: flex
     flex-direction: column
-    margin-left: -4%
+    margin-left: -8%
     white-space: nowrap
     font: 700 18px 'Open Sans Bold', sans-serif
     letter-spacing: 1.5px
