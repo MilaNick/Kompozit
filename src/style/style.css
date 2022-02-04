@@ -1,4 +1,4 @@
-@import url(src/fonts/stylesheet.css);
+@import url(stylesheet.css);
 *,
 *:before,
 *:after {
@@ -383,6 +383,8 @@ img {
     text-transform: uppercase; }
   .logo :last-child {
     font: 200 11px 'Open Sans Light', sans-serif; }
+  .logo:hover {
+    background-size: 0%; }
 
 .nav__item {
   position: relative;

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('src/fonts/open-sans-semibold_allfont.ru-webfont.woff2') format('woff2'),
+         url('src/fonts/open-sans-semibold_allfont.ru-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanssemibold_italic';
+    src: url('src/fonts/open-sans-semibold-italic-webfont.woff2') format('woff2'),
+         url('src/fonts/open-sans-semibold-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('src/fonts/opensans-condlight-webfont.woff2') format('woff2'),
+         url('src/fonts/opensans-condlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansCnLtIt';
+    src: url('src/fonts/opensans-condlightitalic-webfont.woff2') format('woff2'),
+         url('src/fonts/opensans-condlightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sans_condensedbold';
+    src: url('src/fonts/opensans-condbold-webfont.woff2') format('woff2'),
+         url('src/fonts/opensans-condbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansbold';
+    src: url('src/fonts/opensans-bold-webfont.woff2') format('woff2'),
+         url('src/fonts/opensans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
